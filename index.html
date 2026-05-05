@@ -522,6 +522,22 @@
         })[c]);
       }
 
+      function safeHttpUrl(url) {
+        if (!url) return '';
+        try {
+          const u = new URL(url);
+          return (u.protocol === 'http:' || u.protocol === 'https:') ? url : '';
+        } catch {
+          return '';
+        }
+      }
+
+      function safeTel(phone) {
+        if (!phone) return '';
+        const digits = String(phone).replace(/[^\d+]/g, '');
+        return /^\+?\d{4,20}$/.test(digits) ? digits : '';
+      }
+
       function stars(rating) {
         if (rating == null) return '<span class="count">fara rating</span>';
         const full = Math.floor(rating);
@@ -545,11 +561,13 @@
           ? `<details class="hours"><summary>Program</summary><ul>${loc.hours.map(h => `<li>${escapeHtml(h)}</li>`).join('')}</ul></details>`
           : '';
         const directions = `https://www.google.com/maps/dir/?api=1&destination=${loc.lat},${loc.lng}&destination_place_id=${encodeURIComponent(loc.place_id || '')}`;
-        const callBtn = loc.phone
-          ? `<a class="btn secondary" href="tel:${escapeHtml(loc.phone.replace(/\s+/g,''))}">Suna</a>`
+        const safePhone = safeTel(loc.phone);
+        const callBtn = safePhone
+          ? `<a class="btn secondary" href="tel:${safePhone}">Suna</a>`
           : '';
-        const siteBtn = loc.website
-          ? `<a class="btn secondary" href="${escapeHtml(loc.website)}" target="_blank" rel="noopener">Website</a>`
+        const safeSite = safeHttpUrl(loc.website);
+        const siteBtn = safeSite
+          ? `<a class="btn secondary" href="${escapeHtml(safeSite)}" target="_blank" rel="noopener noreferrer">Website</a>`
           : '';
         return `
           <div class="popup">
@@ -559,7 +577,7 @@
             ${openBadge ? `<div class="meta">${openBadge}</div>` : ''}
             ${hours}
             <div class="actions">
-              <a class="btn" href="${directions}" target="_blank" rel="noopener">Directii</a>
+              <a class="btn" href="${directions}" target="_blank" rel="noopener noreferrer">Directii</a>
               ${callBtn}
               ${siteBtn}
             </div>
