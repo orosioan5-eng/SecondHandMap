@@ -1,0 +1,12 @@
+{
+  "city": "Bucuresti",
+  "center": { "lat": 44.4268, "lng": 26.1025, "zoom": 12 },
+  "radius": 15000,
+  "language": "ro",
+  "queries": [
+    "second hand Bucuresti",
+    "magazin haine second hand Bucuresti",
+    "thrift store Bucuresti",
+    "vintage Bucuresti"
+  ]
+}
