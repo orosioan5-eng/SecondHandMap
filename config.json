@@ -2,11 +2,27 @@
   "city": "Bucuresti",
   "center": { "lat": 44.4268, "lng": 26.1025, "zoom": 12 },
   "radius": 15000,
+  "max_distance_km": 25,
   "language": "ro",
   "queries": [
-    "second hand Bucuresti",
-    "magazin haine second hand Bucuresti",
-    "thrift store Bucuresti",
-    "vintage Bucuresti"
+    "second hand",
+    "magazin second hand",
+    "haine second hand",
+    "magazin haine second hand",
+    "thrift store",
+    "vintage",
+    "magazin vintage",
+    "outlet haine",
+    "second hand bulgaresc",
+    "Humana"
+  ],
+  "tiles": [
+    { "lat": 44.4268, "lng": 26.1025, "radius": 8000, "name": "Centru" },
+    { "lat": 44.4795, "lng": 26.0833, "radius": 6000, "name": "Sector 1" },
+    { "lat": 44.4514, "lng": 26.1396, "radius": 6000, "name": "Sector 2" },
+    { "lat": 44.4126, "lng": 26.1681, "radius": 6000, "name": "Sector 3" },
+    { "lat": 44.3851, "lng": 26.1149, "radius": 6000, "name": "Sector 4" },
+    { "lat": 44.4082, "lng": 26.0619, "radius": 6000, "name": "Sector 5" },
+    { "lat": 44.4350, "lng": 26.0250, "radius": 6000, "name": "Sector 6" }
   ]
 }

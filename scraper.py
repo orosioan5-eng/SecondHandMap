@@ -10,6 +10,7 @@ Designed to run weekly on GitHub Actions. Reads GOOGLE_API_KEY from env.
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 import time
@@ -17,6 +18,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+
+
+def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
+    """Great-circle distance in kilometers between two lat/lng points."""
+    r = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp = math.radians(lat2 - lat1)
+    dl = math.radians(lng2 - lng1)
+    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
 
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config.json"
@@ -141,27 +152,37 @@ def main() -> int:
     min_rating = config.get("min_rating")
     center = config.get("center")
     radius = config.get("radius", 15000)
+    max_distance_km = config.get("max_distance_km", 25)
+    tiles = config.get("tiles") or ([{"lat": center["lat"], "lng": center["lng"], "radius": radius}] if center else [{}])
 
     api_key = get_api_key()
 
     seen: dict[str, dict] = {}
-    for query in queries:
-        print(f"Searching: {query}")
-        for hit in text_search(query, language, api_key, center, radius):
-            pid = hit.get("place_id")
-            if not pid or pid in seen:
-                continue
-            detail = fetch_details(pid, language, api_key)
-            if not detail:
-                continue
-            entry = normalize(detail)
-            if not entry:
-                continue
-            if min_rating is not None and (entry.get("rating") or 0) < min_rating:
-                continue
-            if entry.get("business_status") == "CLOSED_PERMANENTLY":
-                continue
-            seen[pid] = entry
+    for tile in tiles:
+        tile_center = {"lat": tile["lat"], "lng": tile["lng"]} if tile.get("lat") is not None else None
+        tile_radius = tile.get("radius", radius)
+        tile_label = f"@{tile['lat']:.3f},{tile['lng']:.3f}" if tile_center else "no-bias"
+        for query in queries:
+            print(f"Searching: {query} {tile_label}")
+            for hit in text_search(query, language, api_key, tile_center, tile_radius):
+                pid = hit.get("place_id")
+                if not pid or pid in seen:
+                    continue
+                detail = fetch_details(pid, language, api_key)
+                if not detail:
+                    continue
+                entry = normalize(detail)
+                if not entry:
+                    continue
+                if min_rating is not None and (entry.get("rating") or 0) < min_rating:
+                    continue
+                if entry.get("business_status") == "CLOSED_PERMANENTLY":
+                    continue
+                if center and max_distance_km is not None:
+                    d = haversine_km(center["lat"], center["lng"], entry["lat"], entry["lng"])
+                    if d > max_distance_km:
+                        continue
+                seen[pid] = entry
 
     locations = sorted(seen.values(), key=lambda x: (-(x.get("rating") or 0), x.get("name") or ""))
 
