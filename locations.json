@@ -6,7 +6,7 @@
     "lng": 26.1025,
     "zoom": 12
   },
-  "count": 151,
+  "count": 140,
   "locations": [
     {
       "place_id": "ChIJJSkYoJX_sUARB7b2g_4S-xc",
@@ -1204,34 +1204,6 @@
       ]
     },
     {
-      "place_id": "ChIJvSvtO1X_sUARoAf8gWfogO4",
-      "name": "Birou Individual Notarial Lex Humana",
-      "address": "Strada Gheorghieni 15 -17, parter, ap.1, 050875 București, România",
-      "lat": 44.4201105,
-      "lng": 26.0777613,
-      "rating": 4.9,
-      "total_ratings": 95,
-      "phone": "0727 881 004",
-      "website": null,
-      "google_maps_url": "https://maps.google.com/?cid=17185991709305866144",
-      "hours": [
-        "luni: 09:00–17:00",
-        "marți: 09:00–17:00",
-        "miercuri: 09:00–17:00",
-        "joi: 09:00–17:00",
-        "vineri: 09:00–17:00",
-        "sâmbătă: Închis",
-        "duminică: Închis"
-      ],
-      "open_now": false,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "finance",
-        "point_of_interest"
-      ]
-    },
-    {
       "place_id": "ChIJEc5H714DskARGcuU7OKZmcg",
       "name": "Finery Outlet Boutique",
       "address": "bloc 1, Strada Barajul Argeș 41, 014121 București, România",
@@ -1256,40 +1228,6 @@
       "types": [
         "clothing_store",
         "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJKSuHnBr_sUARY-8yth11-hY",
-      "name": "Italian Vintage Caffe & Prosecco Bar",
-      "address": "Strada Vasile Alecsandri 3, 010638 București, România",
-      "lat": 44.4502855,
-      "lng": 26.0941894,
-      "rating": 4.9,
-      "total_ratings": 261,
-      "phone": "0727 164 572",
-      "website": "https://italianvintage.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=1655764583483371363",
-      "hours": [
-        "luni: 10:00–20:00",
-        "marți: 10:00–20:00",
-        "miercuri: 10:00–20:00",
-        "joi: 10:00–20:00",
-        "vineri: 10:00–21:00",
-        "sâmbătă: 10:00–21:00",
-        "duminică: 10:00–20:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "bar",
-        "cafe",
-        "clothing_store",
-        "establishment",
-        "food",
-        "home_goods_store",
-        "jewelry_store",
         "point_of_interest",
         "store"
       ]
@@ -1498,37 +1436,6 @@
       ]
     },
     {
-      "place_id": "ChIJQWgMX-__sUARXFVWd6M7Gd4",
-      "name": "Check Vintage & More",
-      "address": "Strada Mihai Vodă 1, 050041 București, România",
-      "lat": 44.4325383,
-      "lng": 26.0960186,
-      "rating": 4.8,
-      "total_ratings": 224,
-      "phone": "0739 841 799",
-      "website": "https://www.checkthespace.ro/menu&setlang=ro",
-      "google_maps_url": "https://maps.google.com/?cid=16003888324105622876",
-      "hours": [
-        "luni: 12:00–18:00",
-        "marți: 12:00–18:00",
-        "miercuri: 12:00–18:00",
-        "joi: 12:00–18:00",
-        "vineri: 12:00–18:00",
-        "sâmbătă: 12:00–18:00",
-        "duminică: 12:00–18:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "bar",
-        "establishment",
-        "food",
-        "point_of_interest",
-        "restaurant",
-        "store"
-      ]
-    },
-    {
       "place_id": "ChIJL_FQcRv_sUARl6MLnjFC1e0",
       "name": "Galeria Olga Art",
       "address": "Strada Covaci 8, 030167 București, România",
@@ -1609,66 +1516,6 @@
       "business_status": "OPERATIONAL",
       "types": [
         "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJ4YhkMWn_sUARCO2DWSXjruI",
-      "name": "Mingle - Vintage & Coffee Shop",
-      "address": "Strada General Eremia Grigorescu 5, 030167 București, România",
-      "lat": 44.4445144,
-      "lng": 26.102426,
-      "rating": 4.8,
-      "total_ratings": 452,
-      "phone": null,
-      "website": "https://www.instagram.com/mingle.bucharest/",
-      "google_maps_url": "https://maps.google.com/?cid=16334242648074480904",
-      "hours": [
-        "luni: 09:00–20:00",
-        "marți: 09:00–20:00",
-        "miercuri: 09:00–20:00",
-        "joi: 09:00–20:00",
-        "vineri: 09:00–21:00",
-        "sâmbătă: 09:00–21:00",
-        "duminică: 09:00–21:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "cafe",
-        "establishment",
-        "food",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJR77dqi7_sUARoobWlp7BHss",
-      "name": "Niche Records",
-      "address": "Strada Arcușului 6A, 031206 București, România",
-      "lat": 44.4202097,
-      "lng": 26.1208833,
-      "rating": 4.8,
-      "total_ratings": 630,
-      "phone": "0374 340 160",
-      "website": "http://www.nicherecords.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=14636348725880325794",
-      "hours": [
-        "luni: 10:00–20:00",
-        "marți: 10:00–20:00",
-        "miercuri: 10:00–20:00",
-        "joi: 10:00–20:00",
-        "vineri: 10:00–20:00",
-        "sâmbătă: 11:00–16:00",
-        "duminică: Închis"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "movie_rental",
         "point_of_interest",
         "store"
       ]
@@ -2022,35 +1869,6 @@
       ]
     },
     {
-      "place_id": "ChIJR39xdHH_sUARMODpOai2a80",
-      "name": "Hope Amanet P2 Exchange & Gold",
-      "address": "Calea Rahovei 305, 052034 București, România",
-      "lat": 44.4105795,
-      "lng": 26.0706138,
-      "rating": 4.6,
-      "total_ratings": 63,
-      "phone": "0770 166 384",
-      "website": "https://www.olx.ro/d/oferte/q-HOPE-AMANET/",
-      "google_maps_url": "https://maps.google.com/?cid=14802125433925656624",
-      "hours": [
-        "luni: Deschis 24 de ore",
-        "marți: Deschis 24 de ore",
-        "miercuri: Deschis 24 de ore",
-        "joi: Deschis 24 de ore",
-        "vineri: Deschis 24 de ore",
-        "sâmbătă: Deschis 24 de ore",
-        "duminică: Deschis 24 de ore"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "finance",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
       "place_id": "ChIJBcWDWD3_sUARDkUFQgJ5Qx0",
       "name": "HĂINUȚE COCHETE",
       "address": "Șoseaua Giurgiului 35, București, România",
@@ -2163,35 +1981,6 @@
         "establishment",
         "point_of_interest",
         "store"
-      ]
-    },
-    {
-      "place_id": "ChIJR1Ard8P9sUAR4-yohrxtuo8",
-      "name": "Barber Shop Vintage",
-      "address": "Șoseaua Olteniței 30, 077160 Popești-Leordeni, România",
-      "lat": 44.3797954,
-      "lng": 26.1607922,
-      "rating": 4.5,
-      "total_ratings": 218,
-      "phone": "0721 345 456",
-      "website": "https://www.facebook.com/vintagebarbershopro/",
-      "google_maps_url": "https://maps.google.com/?cid=10356710949572373731",
-      "hours": [
-        "luni: 10:00–19:00",
-        "marți: 10:00–19:00",
-        "miercuri: 10:00–19:00",
-        "joi: 10:00–19:00",
-        "vineri: 10:00–19:00",
-        "sâmbătă: 09:00–15:00",
-        "duminică: Închis"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest"
       ]
     },
     {
@@ -2676,35 +2465,6 @@
       "types": [
         "clothing_store",
         "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJEWHpNawBskARnbbjwXNcua8",
-      "name": "Hope Amanet & Gold P7",
-      "address": "Bulevardul Iuliu Maniu 67, 077042 București, România",
-      "lat": 44.433744,
-      "lng": 26.0187562,
-      "rating": 4.3,
-      "total_ratings": 156,
-      "phone": "0770 168 023",
-      "website": "https://www.olx.ro/d/oferte/q-HOPE-AMANET/",
-      "google_maps_url": "https://maps.google.com/?cid=12662253479572780701",
-      "hours": [
-        "luni: Deschis 24 de ore",
-        "marți: Deschis 24 de ore",
-        "miercuri: Deschis 24 de ore",
-        "joi: Deschis 24 de ore",
-        "vineri: Deschis 24 de ore",
-        "sâmbătă: Deschis 24 de ore",
-        "duminică: Deschis 24 de ore"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "finance",
         "point_of_interest",
         "store"
       ]
@@ -3312,35 +3072,6 @@
       ]
     },
     {
-      "place_id": "ChIJ8yFk2z__sUARGBiTtwjd3fE",
-      "name": "The Vintage",
-      "address": "Strada Smârdan 43, 030167 București, România",
-      "lat": 44.4303244,
-      "lng": 26.1004608,
-      "rating": 4.1,
-      "total_ratings": 2121,
-      "phone": "0743 797 173",
-      "website": "https://www.thevintagepub.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=17428329162503034904",
-      "hours": [
-        "luni: 13:00–05:00",
-        "marți: 13:00–05:00",
-        "miercuri: 13:00–05:00",
-        "joi: 13:00–05:00",
-        "vineri: 13:00–05:00",
-        "sâmbătă: 13:00–05:00",
-        "duminică: 13:00–05:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "bar",
-        "establishment",
-        "night_club",
-        "point_of_interest"
-      ]
-    },
-    {
       "place_id": "ChIJNTC4XPIAskARPTVWDNgn0h8",
       "name": "Bazarul cu Amintiri - Târgul Valea Cascadelor",
       "address": "Bulevardul Timișoara 103S, 061327 București, România",
@@ -3394,41 +3125,6 @@
         "establishment",
         "point_of_interest",
         "store"
-      ]
-    },
-    {
-      "place_id": "ChIJ0zY37hr-sUARrpzNt84bucQ",
-      "name": "Grand Arena",
-      "address": "Bulevardul Metalurgiei 12-18, 041833 București, România",
-      "lat": 44.3751581,
-      "lng": 26.1181357,
-      "rating": 4,
-      "total_ratings": 12841,
-      "phone": null,
-      "website": "https://www.grandarena.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=14175391876786265262",
-      "hours": [
-        "luni: 07:30–22:00",
-        "marți: 07:30–22:00",
-        "miercuri: 07:30–22:00",
-        "joi: 07:30–22:00",
-        "vineri: 07:30–22:00",
-        "sâmbătă: 07:30–22:00",
-        "duminică: 07:30–22:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "food",
-        "grocery_or_supermarket",
-        "laundry",
-        "point_of_interest",
-        "police",
-        "restaurant",
-        "shopping_mall",
-        "store",
-        "supermarket"
       ]
     },
     {
@@ -3716,35 +3412,6 @@
       "types": [
         "clothing_store",
         "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJR6Yjjo__sUARoDosN_f-_jE",
-      "name": "Ungurash Amanet Rahova, Sector 5. Amanet Sector 5 Non Stop. Amanet Auto, Telefoane, Aur, Electronice Sector 5",
-      "address": "Strada Mărgeanului 73, 051043 București, România",
-      "lat": 44.4097466,
-      "lng": 26.0593671,
-      "rating": 3.8,
-      "total_ratings": 59,
-      "phone": "0768 299 555",
-      "website": "https://m.facebook.com/amanetsector5/?ref=content_filter",
-      "google_maps_url": "https://maps.google.com/?cid=3602597089678998176",
-      "hours": [
-        "luni: Deschis 24 de ore",
-        "marți: Deschis 24 de ore",
-        "miercuri: Deschis 24 de ore",
-        "joi: Deschis 24 de ore",
-        "vineri: Deschis 24 de ore",
-        "sâmbătă: Deschis 24 de ore",
-        "duminică: Deschis 24 de ore"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "finance",
         "point_of_interest",
         "store"
       ]

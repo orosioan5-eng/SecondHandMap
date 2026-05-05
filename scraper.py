@@ -53,6 +53,27 @@ DETAILS_FIELDS = ",".join([
     "types",
 ])
 
+# Google place types that are clearly NOT second-hand stores.
+# A location is dropped if it has ANY of these types.
+TYPE_BLACKLIST = {
+    "restaurant", "food", "cafe", "bar", "night_club",
+    "meal_takeaway", "meal_delivery", "bakery", "liquor_store",
+    "hair_care", "beauty_salon", "spa",
+    "finance", "atm", "bank", "accounting", "insurance_agency",
+    "lawyer", "real_estate_agency",
+    "gym", "hospital", "pharmacy", "dentist", "doctor", "health",
+    "veterinary_care", "physiotherapist",
+    "car_dealer", "car_rental", "car_repair", "car_wash",
+    "gas_station", "parking",
+    "school", "university", "library", "museum",
+    "police", "embassy", "courthouse", "fire_station",
+    "post_office", "city_hall",
+    "lodging",
+    "movie_rental", "movie_theater",
+    "laundry", "grocery_or_supermarket", "supermarket",
+    "convenience_store", "casino",
+}
+
 
 def load_config() -> dict:
     if CONFIG_PATH.exists():
@@ -182,6 +203,8 @@ def main() -> int:
                     d = haversine_km(center["lat"], center["lng"], entry["lat"], entry["lng"])
                     if d > max_distance_km:
                         continue
+                if set(entry.get("types") or []) & TYPE_BLACKLIST:
+                    continue
                 seen[pid] = entry
 
     locations = sorted(seen.values(), key=lambda x: (-(x.get("rating") or 0), x.get("name") or ""))
