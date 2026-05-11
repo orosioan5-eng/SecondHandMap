@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-05-05T14:41:52Z",
+  "updated_at": "2026-05-11T10:29:18Z",
   "city": "Bucuresti",
   "center": {
     "lat": 44.4268,
     "lng": 26.1025,
     "zoom": 12
   },
-  "count": 140,
+  "count": 148,
   "locations": [
     {
       "place_id": "ChIJJSkYoJX_sUARB7b2g_4S-xc",
@@ -67,35 +67,6 @@
       ]
     },
     {
-      "place_id": "ChIJbQSiMjz_sUARqHTOgU-I7IY",
-      "name": "AXEL113",
-      "address": "Strada Alexandru Philippide 5, 020466 București, România",
-      "lat": 44.4472362,
-      "lng": 26.1039351,
-      "rating": 5,
-      "total_ratings": 1,
-      "phone": "0759 517 746",
-      "website": "https://www.axel113.com/",
-      "google_maps_url": "https://maps.google.com/?cid=9722295570647643304",
-      "hours": [
-        "luni: 11:00–19:00",
-        "marți: 11:00–19:00",
-        "miercuri: 11:00–19:00",
-        "joi: 11:00–19:00",
-        "vineri: 11:00–19:00",
-        "sâmbătă: 12:00–16:00",
-        "duminică: Închis"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
       "place_id": "ChIJn1egFgABskARSfh39ukYSDo",
       "name": "Alev Vintage Shop Piele Naturala",
       "address": "Șoseaua Colentina 447-449, București, România",
@@ -125,13 +96,71 @@
       ]
     },
     {
+      "place_id": "ChIJDYTtbjf_sUARozmpIBi1o1Q",
+      "name": "Atelier Sonia Trifan",
+      "address": "Strada Alexandru Philippide nr.5, 020466 București, România",
+      "lat": 44.4472072,
+      "lng": 26.1038835,
+      "rating": 5,
+      "total_ratings": 6,
+      "phone": "0799 946 226",
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=6098917435621587363",
+      "hours": [
+        "luni: 09:00–18:00",
+        "marți: 09:00–18:00",
+        "miercuri: 09:00–18:00",
+        "joi: 09:00–18:00",
+        "vineri: 09:00–18:00",
+        "sâmbătă: Închis",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJm-17c-H_sUAR3dT6MpZL9_8",
+      "name": "Belissima Seduzione",
+      "address": "Șoseaua Olteniței, 041322 București, România",
+      "lat": 44.3844424,
+      "lng": 26.1431554,
+      "rating": 5,
+      "total_ratings": 5,
+      "phone": "0767 102 678",
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=18444293907391632605",
+      "hours": [
+        "luni: 09:00–17:00",
+        "marți: 09:00–17:00",
+        "miercuri: 09:00–17:00",
+        "joi: 09:00–17:00",
+        "vineri: 09:00–17:00",
+        "sâmbătă: 10:00–14:00",
+        "duminică: 10:00–14:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJBSpaJgADskARKI0lovn4lMw",
       "name": "Biji Vintage",
       "address": "Strada Clăbucet 57, 012131 București, România",
       "lat": 44.4732978,
       "lng": 26.0539874,
       "rating": 5,
-      "total_ratings": 11,
+      "total_ratings": 13,
       "phone": null,
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=14741681231341391144",
@@ -176,6 +205,35 @@
       "open_now": true,
       "business_status": "OPERATIONAL",
       "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJ7epYFWv3sUARCGGDoT2q0OM",
+      "name": "Eurotex | Depozit Haine Second Hand En-Gros",
+      "address": "Şos. București - Urziceni nr. 64C, Cladirea A, Depozit nr. C4 - Hala 2, 077010 Afumați, România",
+      "lat": 44.5137748,
+      "lng": 26.2366161,
+      "rating": 5,
+      "total_ratings": 14,
+      "phone": "0749 955 405",
+      "website": "http://www.eurotexromania.com/",
+      "google_maps_url": "https://maps.google.com/?cid=16415807823444926728",
+      "hours": [
+        "luni: 09:00–17:00",
+        "marți: 09:00–17:00",
+        "miercuri: 09:00–17:00",
+        "joi: 09:00–17:00",
+        "vineri: 09:00–17:00",
+        "sâmbătă: 10:00–14:00",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
         "establishment",
         "point_of_interest",
         "store"
@@ -243,8 +301,8 @@
       "place_id": "ChIJW1hzh3j_sUARBbcaa4yD7WA",
       "name": "Fashion butikue",
       "address": "Strada Orăștie, 041061 București, România",
-      "lat": 44.3732863,
-      "lng": 26.0984437,
+      "lat": 44.3732838,
+      "lng": 26.098484,
       "rating": 5,
       "total_ratings": 1,
       "phone": null,
@@ -333,7 +391,7 @@
       "lat": 44.4339434,
       "lng": 26.0318238,
       "rating": 5,
-      "total_ratings": 18,
+      "total_ratings": 20,
       "phone": "0757 252 524",
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=15331407870155457147",
@@ -401,6 +459,34 @@
         "joi: 09:30–19:00",
         "vineri: 09:30–19:00",
         "sâmbătă: 09:00–14:00",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJ-_PcCXP_sUARyk22uOs_ljc",
+      "name": "JurnaleVintage.ro",
+      "address": "Strada Lânăriei 95, 040323 București, România",
+      "lat": 44.41535409999999,
+      "lng": 26.1036301,
+      "rating": 5,
+      "total_ratings": 3,
+      "phone": "0729 209 740",
+      "website": "https://www.jurnalevintage.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=4005459200241454538",
+      "hours": [
+        "luni: 09:00–18:00",
+        "marți: 09:00–18:00",
+        "miercuri: 09:00–18:00",
+        "joi: 09:00–18:00",
+        "vineri: 09:00–18:00",
+        "sâmbătă: Închis",
         "duminică: Închis"
       ],
       "open_now": true,
@@ -518,6 +604,35 @@
       ]
     },
     {
+      "place_id": "ChIJ21sn_O4BskARdcw77Mhc5yU",
+      "name": "MIZAR Outlet - Fashion House Militari",
+      "address": "Str. Comerțului 13, 077090 Domnești, România",
+      "lat": 44.4337201,
+      "lng": 25.9539928,
+      "rating": 5,
+      "total_ratings": 7,
+      "phone": "0775 352 105",
+      "website": "http://www.mizaroutlet.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=2731253717050051701",
+      "hours": [
+        "luni: 10:00–21:00",
+        "marți: 10:00–21:00",
+        "miercuri: 10:00–21:00",
+        "joi: 10:00–21:00",
+        "vineri: 10:00–21:00",
+        "sâmbătă: 10:00–21:00",
+        "duminică: 10:00–20:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJa4V-TdL_sUARyxCtYp8muVg",
       "name": "Mihaela - second hand",
       "address": "Șoseaua Alexandriei 11C, 051523 București, România",
@@ -536,6 +651,35 @@
         "vineri: 09:00–18:00",
         "sâmbătă: 09:00–15:00",
         "duminică: 09:00–15:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJX1TG93L_sUARWOWNDFkE4BM",
+      "name": "Mitiliane Couture",
+      "address": "Bucureşti Sectorul 3, 030857 București, România",
+      "lat": 44.4263821,
+      "lng": 26.1196363,
+      "rating": 5,
+      "total_ratings": 1,
+      "phone": "0729 796 403",
+      "website": "https://www.mitilianecouture.com/",
+      "google_maps_url": "https://maps.google.com/?cid=1432149462013044056",
+      "hours": [
+        "luni: 08:00–16:00",
+        "marți: 08:00–16:00",
+        "miercuri: 08:00–16:00",
+        "joi: 08:00–16:00",
+        "vineri: 08:00–16:00",
+        "sâmbătă: Închis",
+        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -569,6 +713,35 @@
       "open_now": true,
       "business_status": "OPERATIONAL",
       "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJfTSMukX_sUARlXfRbABbA6A",
+      "name": "NEXT ICON KIDS",
+      "address": "Bulevardul Basarabia 100, 022122 București, România",
+      "lat": 44.4327622,
+      "lng": 26.1542696,
+      "rating": 5,
+      "total_ratings": 4,
+      "phone": "0750 280 130",
+      "website": "https://www.nexticon.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=11530159528382396309",
+      "hours": [
+        "luni: 09:00–19:00",
+        "marți: 09:00–19:00",
+        "miercuri: 09:00–19:00",
+        "joi: 09:00–19:00",
+        "vineri: 09:00–19:00",
+        "sâmbătă: 09:00–14:00",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
         "establishment",
         "point_of_interest",
         "store"
@@ -610,7 +783,7 @@
       "lat": 44.4338367,
       "lng": 26.0263164,
       "rating": 5,
-      "total_ratings": 6,
+      "total_ratings": 8,
       "phone": "0744 554 189",
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=2283976275736906248",
@@ -639,7 +812,7 @@
       "lat": 44.4319994,
       "lng": 26.1014269,
       "rating": 5,
-      "total_ratings": 3,
+      "total_ratings": 4,
       "phone": "0771 400 437",
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=6500700570670208218",
@@ -972,34 +1145,6 @@
       ]
     },
     {
-      "place_id": "ChIJA5glYd75sUARLfTobFDs_qM",
-      "name": "Vintage Home produse second hand",
-      "address": "Șoseaua Ștefan cel Mare 35, bloc 31 scara 4, 020132 București, România",
-      "lat": 44.4513493,
-      "lng": 26.1225388,
-      "rating": 5,
-      "total_ratings": 3,
-      "phone": null,
-      "website": "https://www.facebook.com/Vintage-Home-101756455616479/",
-      "google_maps_url": "https://maps.google.com/?cid=11817142302435505197",
-      "hours": [
-        "luni: 10:00–12:30, 16:00–19:00",
-        "marți: 10:00–12:30, 16:00–19:00",
-        "miercuri: 10:00–12:30, 16:00–19:00",
-        "joi: 10:00–12:30, 16:00–19:00",
-        "vineri: 10:00–12:30, 16:00–19:00",
-        "sâmbătă: 10:00–13:00",
-        "duminică: Închis"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
       "place_id": "ChIJxQ4ENDb_sUAR2IcU5OSspxo",
       "name": "Vintage Lady - Store S. R. L.",
       "address": "Strada Edgar Quinet 9, etaj 1, 010017 București, România",
@@ -1019,7 +1164,7 @@
         "sâmbătă: 12:00–19:00",
         "duminică: 12:00–17:00"
       ],
-      "open_now": true,
+      "open_now": false,
       "business_status": "OPERATIONAL",
       "types": [
         "establishment",
@@ -1035,7 +1180,7 @@
       "lat": 44.4424093,
       "lng": 26.0974378,
       "rating": 5,
-      "total_ratings": 183,
+      "total_ratings": 184,
       "phone": "0763 623 858",
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=16979345311402313278",
@@ -1048,7 +1193,7 @@
         "sâmbătă: 12:00–19:00",
         "duminică: 12:00–19:00"
       ],
-      "open_now": true,
+      "open_now": false,
       "business_status": "OPERATIONAL",
       "types": [
         "clothing_store",
@@ -1122,7 +1267,7 @@
       "lat": 44.4285411,
       "lng": 26.105243,
       "rating": 4.9,
-      "total_ratings": 371,
+      "total_ratings": 372,
       "phone": "0728 093 833",
       "website": "https://annebebe.ro/",
       "google_maps_url": "https://maps.google.com/?cid=1376241217323243212",
@@ -1164,35 +1309,6 @@
         "vineri: 11:00–21:00",
         "sâmbătă: 11:00–20:00",
         "duminică: 11:00–17:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJf25J47P_sUAR9yZzel9kIdo",
-      "name": "Bine Boutique",
-      "address": "Strada Biserica Amzei 29, 010393 București, România",
-      "lat": 44.4457974,
-      "lng": 26.0967247,
-      "rating": 4.9,
-      "total_ratings": 82,
-      "phone": "021 313 1499",
-      "website": "http://www.bineboutique.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=15717954535738779383",
-      "hours": [
-        "luni: Închis",
-        "marți: 10:00–13:30, 14:00–19:00",
-        "miercuri: 10:00–13:30, 14:00–19:00",
-        "joi: 10:00–13:30, 14:00–19:00",
-        "vineri: 10:00–13:30, 14:00–19:00",
-        "sâmbătă: 10:00–13:30, 14:00–19:00",
-        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -1321,6 +1437,35 @@
       ]
     },
     {
+      "place_id": "ChIJadNmeP__sUARihWybPU4_fY",
+      "name": "ANTIQUE Cufărul Cu Vechituri",
+      "address": "Strada Blănari 12 bis, 030167 București, România",
+      "lat": 44.4325762,
+      "lng": 26.1023574,
+      "rating": 4.8,
+      "total_ratings": 34,
+      "phone": "0744 529 772",
+      "website": "https://cufarulcuvechituri.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=17797443929179821450",
+      "hours": [
+        "luni: 10:00–18:00",
+        "marți: 10:00–18:00",
+        "miercuri: 10:00–18:00",
+        "joi: 10:00–18:00",
+        "vineri: 10:00–18:00",
+        "sâmbătă: 10:00–16:00",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJw31WKgD5sUARdrQQuQBlM24",
       "name": "Alev Vintage Shop Colentina",
       "address": "Șoseaua Colentina 447-449, București, România",
@@ -1408,29 +1553,59 @@
       ]
     },
     {
-      "place_id": "ChIJ95Qepar4sUARGTTUXAoGewA",
-      "name": "Casa Retro",
-      "address": "Intrarea Geneva 8, 011735 București, România",
-      "lat": 44.4516624,
-      "lng": 26.0895614,
+      "place_id": "ChIJbyGBHjr_sUARaRQjHmWhpPo",
+      "name": "Charity Shop",
+      "address": "Bloc 10C, Calea Plevnei 98, 010237 București, România",
+      "lat": 44.438756,
+      "lng": 26.0765427,
       "rating": 4.8,
-      "total_ratings": 174,
-      "phone": "0722 510 227",
-      "website": "http://www.casaretro.com/",
-      "google_maps_url": "https://maps.google.com/?cid=34628063712261145",
+      "total_ratings": 16,
+      "phone": "0774 602 188",
+      "website": "http://www.omanadeajutor.eu/",
+      "google_maps_url": "https://maps.google.com/?cid=18060737861331915881",
       "hours": [
-        "luni: Închis",
-        "marți: 17:00–20:00",
-        "miercuri: 17:00–20:00",
-        "joi: 17:00–20:00",
-        "vineri: 17:00–20:00",
-        "sâmbătă: Închis",
+        "luni: 09:00–17:00",
+        "marți: 09:00–17:00",
+        "miercuri: 09:00–17:00",
+        "joi: 09:00–17:00",
+        "vineri: 09:00–17:00",
+        "sâmbătă: 09:00–14:00",
         "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
       "types": [
         "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJESsnuBz_sUARGpJTeOpV1Ho",
+      "name": "Exotique",
+      "address": "Splaiul Unirii 96, 040301 București, România",
+      "lat": 44.4179813,
+      "lng": 26.1106261,
+      "rating": 4.8,
+      "total_ratings": 126,
+      "phone": "0723 653 313",
+      "website": "http://www.exotique.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=8850793633219318298",
+      "hours": [
+        "luni: 10:00–18:30",
+        "marți: 10:00–18:30",
+        "miercuri: 10:00–18:30",
+        "joi: 10:00–18:30",
+        "vineri: 10:00–18:30",
+        "sâmbătă: 10:30–16:30",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "furniture_store",
+        "home_goods_store",
         "point_of_interest",
         "store"
       ]
@@ -1493,13 +1668,42 @@
       ]
     },
     {
+      "place_id": "ChIJpZpJQwD9sUARxy8UnJGFA1w",
+      "name": "Loran Outlet",
+      "address": "Str. Biruinței 87, 077160 Popești-Leordeni, România",
+      "lat": 44.3621144,
+      "lng": 26.1523694,
+      "rating": 4.8,
+      "total_ratings": 36,
+      "phone": null,
+      "website": "https://www.facebook.com/share/g/16dr1GY8D3/?mibextid=wwXIfr",
+      "google_maps_url": "https://maps.google.com/?cid=6630289936854822855",
+      "hours": [
+        "luni: 10:00–22:00",
+        "marți: 10:00–22:00",
+        "miercuri: 10:00–22:00",
+        "joi: 10:00–22:00",
+        "vineri: 10:00–22:00",
+        "sâmbătă: 10:00–22:00",
+        "duminică: 10:00–22:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJx3edI78BskARz36uA-hWV7A",
       "name": "Magazin 22",
-      "address": "Bloc 18A, Calea Crângași 8, 060336 București, România",
-      "lat": 44.45441290000001,
-      "lng": 26.054384,
+      "address": "Calea Crângași 13, Bloc 11, 060336 București, România",
+      "lat": 44.4534747,
+      "lng": 26.0545546,
       "rating": 4.8,
-      "total_ratings": 13,
+      "total_ratings": 12,
       "phone": null,
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=12706720428143312591",
@@ -1638,6 +1842,64 @@
       ]
     },
     {
+      "place_id": "ChIJi9lXebX5sUARdEgAAFWnu5E",
+      "name": "YOYO Second Hand",
+      "address": "Șoseaua Colentina Nr 25, Bloc 2IRTA, parter, 021156 București, România",
+      "lat": 44.45562570000001,
+      "lng": 26.1285876,
+      "rating": 4.8,
+      "total_ratings": 26,
+      "phone": "0767 991 421",
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=10501170939658520692",
+      "hours": [
+        "luni: 08:00–19:00",
+        "marți: 08:00–17:00",
+        "miercuri: 08:00–19:00",
+        "joi: 08:00–19:00",
+        "vineri: 08:00–19:00",
+        "sâmbătă: 09:00–15:00",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJeevMg_wBskARgbjm6INMQvs",
+      "name": "ANTICHITĂŢI HALF RETRO",
+      "address": "Bulevardul Gheorghe Duca nr.21, 011073 București, România",
+      "lat": 44.449833,
+      "lng": 26.0781113,
+      "rating": 4.7,
+      "total_ratings": 28,
+      "phone": "0722 771 994",
+      "website": "http://www.antichitati-halfretro.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=18105117581414676609",
+      "hours": [
+        "luni: 10:00–18:00",
+        "marți: 10:00–18:00",
+        "miercuri: 10:00–18:00",
+        "joi: 10:00–18:00",
+        "vineri: 10:00–18:00",
+        "sâmbătă: 10:00–14:30",
+        "duminică: Închis"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJEaY5nQ0DskARfd0pesuAvo8",
       "name": "AUTHENTIC OUTLET SRL",
       "address": "Strada Pieței 73, 012799 București, România",
@@ -1712,38 +1974,9 @@
         "joi: 17:30–20:00",
         "vineri: 17:30–20:00",
         "sâmbătă: 13:00–20:00",
-        "duminică: 13:00–18:00"
+        "duminică: 13:00–19:00"
       ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJpZpJQwD9sUARxy8UnJGFA1w",
-      "name": "Loran Outlet",
-      "address": "Str. Biruinței 87, 077160 Popești-Leordeni, România",
-      "lat": 44.3621144,
-      "lng": 26.1523694,
-      "rating": 4.7,
-      "total_ratings": 37,
-      "phone": null,
-      "website": "https://www.facebook.com/share/g/16dr1GY8D3/?mibextid=wwXIfr",
-      "google_maps_url": "https://maps.google.com/?cid=6630289936854822855",
-      "hours": [
-        "luni: 10:00–22:00",
-        "marți: 10:00–22:00",
-        "miercuri: 10:00–22:00",
-        "joi: 10:00–22:00",
-        "vineri: 10:00–22:00",
-        "sâmbătă: 10:00–22:00",
-        "duminică: 10:00–22:00"
-      ],
-      "open_now": true,
+      "open_now": false,
       "business_status": "OPERATIONAL",
       "types": [
         "clothing_store",
@@ -1771,35 +2004,6 @@
         "vineri: 09:00–19:00",
         "sâmbătă: 09:00–15:00",
         "duminică: Închis"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJG1QdAiX7sUARX2fu10tWv4k",
-      "name": "TinaR Outlet Pallady",
-      "address": "Autostrada Soarelui, 077035 Ilfov, România",
-      "lat": 44.4063636,
-      "lng": 26.2791508,
-      "rating": 4.7,
-      "total_ratings": 13,
-      "phone": "0374 897 933",
-      "website": "http://tinar.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=9925746987493123935",
-      "hours": [
-        "luni: 10:00–21:00",
-        "marți: 10:00–21:00",
-        "miercuri: 10:00–21:00",
-        "joi: 10:00–21:00",
-        "vineri: 10:00–21:00",
-        "sâmbătă: 10:00–22:00",
-        "duminică: 10:00–22:00"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -1901,8 +2105,8 @@
       "place_id": "ChIJY4gqbsL-sUARztrK6Pl6h0I",
       "name": "Magazin Imbracaminte La Gaga",
       "address": "Strada Complexului 1, nr 1b, 031701 București, România",
-      "lat": 44.4207498,
-      "lng": 26.1402772,
+      "lat": 44.420758,
+      "lng": 26.1402972,
       "rating": 4.6,
       "total_ratings": 78,
       "phone": "0765 596 950",
@@ -1933,7 +2137,7 @@
       "lat": 44.42005349999999,
       "lng": 26.1163245,
       "rating": 4.6,
-      "total_ratings": 253,
+      "total_ratings": 254,
       "phone": "0742 842 706",
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=72751593344023699",
@@ -1974,34 +2178,6 @@
         "vineri: 08:00–21:00",
         "sâmbătă: 08:00–21:00",
         "duminică: 08:00–18:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJCVJs9tEAskARs5jMjtCYtSk",
-      "name": "Columbia",
-      "address": "Fashion House Outlet Centre Militari, Str. Comerțului 7-13, 077090 Domnești, România",
-      "lat": 44.43363840000001,
-      "lng": 25.953838,
-      "rating": 4.5,
-      "total_ratings": 44,
-      "phone": "021 380 5094",
-      "website": "http://www.dockyard.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=3005476347856066739",
-      "hours": [
-        "luni: 10:00–21:00",
-        "marți: 10:00–21:00",
-        "miercuri: 10:00–21:00",
-        "joi: 10:00–21:00",
-        "vineri: 10:00–21:00",
-        "sâmbătă: 10:00–21:00",
-        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -2089,42 +2265,13 @@
         "sâmbătă: 12:00–18:00",
         "duminică: Închis"
       ],
-      "open_now": false,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "shoe_store",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJJ4WJd9n-sUARzmq_n5tXFMA",
-      "name": "Outwear",
-      "address": "Bulevardul Decebal 14, 030967 București, România",
-      "lat": 44.428691,
-      "lng": 26.13401,
-      "rating": 4.5,
-      "total_ratings": 211,
-      "phone": "0747 120 055",
-      "website": "http://www.outwear.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=13840783880728046286",
-      "hours": [
-        "luni: 10:00–21:00",
-        "marți: 10:00–21:00",
-        "miercuri: 10:00–21:00",
-        "joi: 10:00–21:00",
-        "vineri: 10:00–21:00",
-        "sâmbătă: 10:00–21:00",
-        "duminică: 11:00–19:00"
-      ],
       "open_now": true,
       "business_status": "OPERATIONAL",
       "types": [
         "clothing_store",
         "establishment",
         "point_of_interest",
+        "shoe_store",
         "store"
       ]
     },
@@ -2147,6 +2294,35 @@
         "vineri: 11:00–19:00",
         "sâmbătă: 11:00–19:00",
         "duminică: 11:00–19:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJiauF2dT4sUARXbTJbsj0ZJU",
+      "name": "Premium Second Hand",
+      "address": "București, România",
+      "lat": 44.4416288,
+      "lng": 26.1357557,
+      "rating": 4.5,
+      "total_ratings": 2,
+      "phone": null,
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=10764998151011677277",
+      "hours": [
+        "luni: 08:30–19:30",
+        "marți: 08:30–17:00",
+        "miercuri: 08:30–19:30",
+        "joi: 08:30–19:30",
+        "vineri: 08:30–19:30",
+        "sâmbătă: 08:30–14:30",
+        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -2211,10 +2387,10 @@
       "place_id": "ChIJV4qfQgX_sUARzUeAyPU8-Mw",
       "name": "Printre Cărți",
       "address": "Strada Mașina de Pâine 49-51, 021127 București, România",
-      "lat": 44.4556808,
-      "lng": 26.1266001,
+      "lat": 44.455706,
+      "lng": 26.1266255,
       "rating": 4.5,
-      "total_ratings": 980,
+      "total_ratings": 981,
       "phone": "031 101 9775",
       "website": "https://www.printrecarti.ro/",
       "google_maps_url": "https://maps.google.com/?cid=14769622004290045901",
@@ -2296,13 +2472,41 @@
       ]
     },
     {
+      "place_id": "ChIJhaLqMeH-sUARU50LfAR-2x0",
+      "name": "București Mall (Mall Vitan)",
+      "address": "Calea Vitan 55-59, 031282 București, România",
+      "lat": 44.4200994,
+      "lng": 26.1262378,
+      "rating": 4.4,
+      "total_ratings": 19860,
+      "phone": "021 327 6700",
+      "website": "https://bucurestimall.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=2151451804725648723",
+      "hours": [
+        "luni: 10:00–22:00",
+        "marți: 10:00–22:00",
+        "miercuri: 10:00–22:00",
+        "joi: 10:00–22:00",
+        "vineri: 10:00–22:00",
+        "sâmbătă: 10:00–22:00",
+        "duminică: 10:00–22:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "shopping_mall"
+      ]
+    },
+    {
       "place_id": "ChIJC3TGx0D_sUAR6AKL7l1jzsk",
       "name": "ILike Outlet",
       "address": "Strada Academiei 1, 030167 București, România",
       "lat": 44.4341406,
       "lng": 26.099476,
       "rating": 4.4,
-      "total_ratings": 521,
+      "total_ratings": 523,
       "phone": "031 431 1552",
       "website": "https://ilikeoutlet.ro/",
       "google_maps_url": "https://maps.google.com/?cid=14541669501911106280",
@@ -2383,6 +2587,35 @@
       ]
     },
     {
+      "place_id": "ChIJka2LNEn_sUARMc7isfiBMzY",
+      "name": "Podoabe cu Stil, Antique & Vintage Jewelry",
+      "address": "Strada Lipscani, Strada Hanul cu Tei 63-65, 030167 București, România",
+      "lat": 44.4323458,
+      "lng": 26.1022483,
+      "rating": 4.4,
+      "total_ratings": 46,
+      "phone": "0729 729 051",
+      "website": "http://www.podoabecustil.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=3905608206996655665",
+      "hours": [
+        "luni: 11:00–15:30",
+        "marți: 11:00–15:30",
+        "miercuri: 11:00–15:30",
+        "joi: 11:00–15:30",
+        "vineri: 10:00–18:00",
+        "sâmbătă: 10:00–18:00",
+        "duminică: 10:00–15:30"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "establishment",
+        "jewelry_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "place_id": "ChIJ89DIA87-sUARCzHXWzbE8QI",
       "name": "Second Hand Arena",
       "address": "Bulevardul Basarabia 80, 022119 București, România",
@@ -2418,7 +2651,7 @@
       "lat": 44.4336355,
       "lng": 26.0207929,
       "rating": 4.4,
-      "total_ratings": 26,
+      "total_ratings": 27,
       "phone": "0767 833 882",
       "website": "https://facebook.com/groups/2512757582331472/",
       "google_maps_url": "https://maps.google.com/?cid=16700205217417507731",
@@ -2447,7 +2680,7 @@
       "lat": 44.5494235,
       "lng": 26.0686652,
       "rating": 4.3,
-      "total_ratings": 384,
+      "total_ratings": 385,
       "phone": "0743 555 521",
       "website": "https://www.bigotti.ro/",
       "google_maps_url": "https://maps.google.com/?cid=7433470192479270646",
@@ -2476,7 +2709,7 @@
       "lat": 44.3613545,
       "lng": 26.1239269,
       "rating": 4.3,
-      "total_ratings": 11802,
+      "total_ratings": 11803,
       "phone": "021 406 5200",
       "website": "https://corporate.e-jumbo.gr/ro/",
       "google_maps_url": "https://maps.google.com/?cid=11284728414642219080",
@@ -2615,8 +2848,8 @@
       "place_id": "ChIJqyyhOAD_sUARVMb8yY3HCvw",
       "name": "HAPPY TIME",
       "address": "Strada Năsăud 97, 052034 București, România",
-      "lat": 44.4101949,
-      "lng": 26.0785131,
+      "lat": 44.4187764,
+      "lng": 26.0128488,
       "rating": 4.2,
       "total_ratings": 5,
       "phone": null,
@@ -2704,7 +2937,7 @@
       "lat": 44.4498658,
       "lng": 26.126007,
       "rating": 4.1,
-      "total_ratings": 14962,
+      "total_ratings": 14968,
       "phone": "021 252 5934",
       "website": "http://www.bucurobor.ro/",
       "google_maps_url": "https://maps.google.com/?cid=7107396578885003655",
@@ -2763,7 +2996,7 @@
       "lat": 44.4337971,
       "lng": 25.9552958,
       "rating": 4.1,
-      "total_ratings": 12151,
+      "total_ratings": 12156,
       "phone": "021 380 5070",
       "website": "http://www.fashionhouse.ro/",
       "google_maps_url": "https://maps.google.com/?cid=15136391584828404892",
@@ -2791,7 +3024,7 @@
       "lat": 44.4061802,
       "lng": 26.276944,
       "rating": 4.1,
-      "total_ratings": 3088,
+      "total_ratings": 3098,
       "phone": "0342 401 000",
       "website": "https://fashionhouse.ro/pallady/",
       "google_maps_url": "https://maps.google.com/?cid=14273312477082610123",
@@ -2819,7 +3052,7 @@
       "lat": 44.4526498,
       "lng": 26.1082625,
       "rating": 4.1,
-      "total_ratings": 469,
+      "total_ratings": 471,
       "phone": "0736 625 590",
       "website": "http://www.humana-romania.ro/",
       "google_maps_url": "https://maps.google.com/?cid=10316553842386972072",
@@ -2876,7 +3109,7 @@
       "lat": 44.45194290000001,
       "lng": 26.0782647,
       "rating": 4.1,
-      "total_ratings": 518,
+      "total_ratings": 521,
       "phone": "0737 018 491",
       "website": "http://www.humana-romania.ro/",
       "google_maps_url": "https://maps.google.com/?cid=11199903377808018750",
@@ -3078,7 +3311,7 @@
       "lat": 44.4233504,
       "lng": 25.9988193,
       "rating": 4,
-      "total_ratings": 2963,
+      "total_ratings": 2966,
       "phone": "0771 155 809",
       "website": "https://bazarulcuamintiri.ro/",
       "google_maps_url": "https://maps.google.com/?cid=2292938969158399293",
@@ -3337,7 +3570,7 @@
       "lat": 44.4299971,
       "lng": 26.0523387,
       "rating": 3.8,
-      "total_ratings": 72,
+      "total_ratings": 74,
       "phone": "0772 282 372",
       "website": "https://retrofuture.ro/",
       "google_maps_url": "https://maps.google.com/?cid=13113884912320927350",
@@ -3406,35 +3639,6 @@
         "vineri: 09:00–21:00",
         "sâmbătă: 09:00–20:00",
         "duminică: 09:00–21:00"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "place_id": "ChIJxcAcewD5sUARmD_xPuMtSDE",
-      "name": "Babilon Second Hand",
-      "address": "Calea Moșilor 241, 020847 București, România",
-      "lat": 44.4465953,
-      "lng": 26.1217468,
-      "rating": 3.7,
-      "total_ratings": 6,
-      "phone": null,
-      "website": "https://www.facebook.com/profile.php?id=61556382451855",
-      "google_maps_url": "https://maps.google.com/?cid=3551138760218460056",
-      "hours": [
-        "luni: 10:00–19:00",
-        "marți: 10:00–19:00",
-        "miercuri: 10:00–19:00",
-        "joi: 10:00–19:00",
-        "vineri: 10:00–19:00",
-        "sâmbătă: Închis",
-        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -3543,13 +3747,13 @@
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=6197790732062490838",
       "hours": [
-        "luni: Deschis 24 de ore",
-        "marți: Deschis 24 de ore",
-        "miercuri: Deschis 24 de ore",
-        "joi: Deschis 24 de ore",
-        "vineri: Deschis 24 de ore",
-        "sâmbătă: Deschis 24 de ore",
-        "duminică: Deschis 24 de ore"
+        "luni: 09:00–21:00",
+        "marți: 09:00–21:00",
+        "miercuri: 09:00–21:00",
+        "joi: 09:00–21:00",
+        "vineri: 09:00–21:00",
+        "sâmbătă: 09:00–21:00",
+        "duminică: 09:00–21:00"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -3573,6 +3777,35 @@
       "google_maps_url": "https://maps.google.com/?cid=3525506132207672128",
       "hours": [],
       "open_now": null,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJ1ypilfwBskARPMMPStIOD6g",
+      "name": "ZENDA",
+      "address": "Strada Cătănoaia 33, 032903 București, România",
+      "lat": 44.4249595,
+      "lng": 26.2140966,
+      "rating": 3.6,
+      "total_ratings": 54,
+      "phone": "0758 020 321",
+      "website": "http://www.zenda.ro/",
+      "google_maps_url": "https://maps.google.com/?cid=12109914219371021116",
+      "hours": [
+        "luni: 09:00–17:30",
+        "marți: 09:00–17:30",
+        "miercuri: 09:00–17:30",
+        "joi: 09:00–17:30",
+        "vineri: 09:00–17:30",
+        "sâmbătă: Închis",
+        "duminică: Închis"
+      ],
+      "open_now": true,
       "business_status": "OPERATIONAL",
       "types": [
         "clothing_store",
@@ -3668,35 +3901,6 @@
       ]
     },
     {
-      "place_id": "ChIJ72GOkzL5sUARDnphaStk4ys",
-      "name": "Vintage Years",
-      "address": "Strada Carei 15, bl mr7, 022201 București, România",
-      "lat": 44.437244,
-      "lng": 26.16595,
-      "rating": 3,
-      "total_ratings": 2,
-      "phone": "0731 719 853",
-      "website": null,
-      "google_maps_url": "https://maps.google.com/?cid=3162481500958587406",
-      "hours": [
-        "luni: Deschis 24 de ore",
-        "marți: Deschis 24 de ore",
-        "miercuri: Deschis 24 de ore",
-        "joi: Deschis 24 de ore",
-        "vineri: Deschis 24 de ore",
-        "sâmbătă: Deschis 24 de ore",
-        "duminică: Deschis 24 de ore"
-      ],
-      "open_now": true,
-      "business_status": "OPERATIONAL",
-      "types": [
-        "clothing_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
       "place_id": "ChIJYUELIYT5sUARJpcC45ZeQI8",
       "name": "Mira Second Hand",
       "address": "Șoseaua Mihai Bravu 33, 021304 București, România",
@@ -3744,6 +3948,35 @@
         "vineri: 12:00–20:00",
         "sâmbătă: 10:00–16:00",
         "duminică: 10:00–16:00"
+      ],
+      "open_now": true,
+      "business_status": "OPERATIONAL",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "place_id": "ChIJx2tZx0D_sUARsztV2M50oiw",
+      "name": "Haine En Gros Romania",
+      "address": "Str. Spătarul Preda 5, 052034 București, România",
+      "lat": 44.412932,
+      "lng": 26.0855024,
+      "rating": null,
+      "total_ratings": null,
+      "phone": "0769 989 032",
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=3216261515637504947",
+      "hours": [
+        "luni: 09:00–17:00",
+        "marți: 09:00–17:00",
+        "miercuri: 09:00–17:00",
+        "joi: 09:00–17:00",
+        "vineri: 09:00–17:00",
+        "sâmbătă: Închis",
+        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -3891,24 +4124,24 @@
       ]
     },
     {
-      "place_id": "ChIJfTSMukX_sUARlXfRbABbA6A",
-      "name": "NEXT ICON KIDS",
-      "address": "Bulevardul Basarabia 100, 022122 București, România",
-      "lat": 44.4327622,
-      "lng": 26.1542696,
+      "place_id": "ChIJxVhDCOf5sUAR-NlH2LgGNfM",
+      "name": "MADABA SECOND HAND HAINE",
+      "address": "București RO, bloc, Șoseaua Colentina, ALMO, parter, 021172 București, România",
+      "lat": 44.450209,
+      "lng": 26.1276344,
       "rating": null,
       "total_ratings": null,
-      "phone": "0750 280 130",
-      "website": "https://www.nexticon.ro/",
-      "google_maps_url": "https://maps.google.com/?cid=11530159528382396309",
+      "phone": "0726 677 746",
+      "website": null,
+      "google_maps_url": "https://maps.google.com/?cid=17524920915954489848",
       "hours": [
-        "luni: 09:00–19:00",
-        "marți: 09:00–19:00",
-        "miercuri: 09:00–19:00",
-        "joi: 09:00–19:00",
-        "vineri: 09:00–19:00",
-        "sâmbătă: 09:00–14:00",
-        "duminică: Închis"
+        "luni: 08:30–20:00",
+        "marți: 08:30–20:00",
+        "miercuri: 08:30–20:00",
+        "joi: 08:30–20:00",
+        "vineri: 08:30–20:00",
+        "sâmbătă: 08:30–20:00",
+        "duminică: 08:30–20:00"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -3949,24 +4182,24 @@
       ]
     },
     {
-      "place_id": "ChIJFdj7AgD_sUARvSXGWUrPCBc",
-      "name": "Second Hand Berceni",
-      "address": "Șoseaua Berceni 17, 077160 București, România",
-      "lat": 44.3890179,
-      "lng": 26.1262328,
+      "place_id": "ChIJI86Mm7EBskARK7eBgC-Wax0",
+      "name": "Second Hand For You",
+      "address": "Bloc 10A, București, România",
+      "lat": 44.4339151,
+      "lng": 26.0267772,
       "rating": null,
       "total_ratings": null,
-      "phone": "0747 777 602",
+      "phone": null,
       "website": null,
-      "google_maps_url": "https://maps.google.com/?cid=1659804380926715325",
+      "google_maps_url": "https://maps.google.com/?cid=2119953180371564331",
       "hours": [
-        "luni: 09:00–19:00",
-        "marți: 09:00–19:00",
-        "miercuri: 09:00–19:00",
-        "joi: 09:00–19:00",
-        "vineri: 09:00–19:00",
-        "sâmbătă: 09:00–17:00",
-        "duminică: 09:00–17:00"
+        "luni: 09:00–18:00",
+        "marți: 09:00–18:00",
+        "miercuri: 09:00–18:00",
+        "joi: 09:00–18:00",
+        "vineri: 09:00–18:00",
+        "sâmbătă: 09:00–13:00",
+        "duminică: Închis"
       ],
       "open_now": true,
       "business_status": "OPERATIONAL",
@@ -3989,12 +4222,12 @@
       "website": null,
       "google_maps_url": "https://maps.google.com/?cid=9177975579553391278",
       "hours": [
-        "luni: 10:00–20:00",
-        "marți: 10:00–20:00",
-        "miercuri: 10:00–20:00",
-        "joi: 10:00–20:00",
-        "vineri: 10:00–20:00",
-        "sâmbătă: 10:00–20:00",
+        "luni: 09:00–21:00",
+        "marți: 09:00–21:00",
+        "miercuri: 09:00–21:00",
+        "joi: 09:00–21:00",
+        "vineri: 09:00–21:00",
+        "sâmbătă: 09:00–21:00",
         "duminică: Închis"
       ],
       "open_now": true,
