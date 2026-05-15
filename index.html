@@ -300,10 +300,15 @@
     }
     .popup-gallery.single { grid-template-columns: 1fr; }
     .popup-gallery.double { grid-template-columns: 1fr 1fr; }
-    .popup-gallery a {
+    .popup-gallery .lb-trigger {
       display: block;
       overflow: hidden;
       position: relative;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      font: inherit;
     }
     .popup-gallery img {
       width: 100%;
@@ -312,7 +317,7 @@
       display: block;
       transition: transform .2s;
     }
-    .popup-gallery a:hover img { transform: scale(1.05); }
+    .popup-gallery .lb-trigger:hover img { transform: scale(1.05); }
     .popup-gallery .more {
       position: absolute;
       inset: 0;
@@ -528,6 +533,82 @@
       animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      animation: lb-fade .18s ease-out;
+      padding: calc(20px + var(--safe-top)) 20px calc(20px + var(--safe-bottom));
+    }
+    .lightbox.open { display: flex; }
+    @keyframes lb-fade { from { opacity: 0; } to { opacity: 1; } }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .lightbox-btn {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      padding: 0;
+      transition: background .15s, transform .12s;
+    }
+    .lightbox-btn:hover { background: rgba(255, 255, 255, 0.25); }
+    .lightbox-btn:active { transform: scale(0.92); }
+    .lightbox-btn:disabled { opacity: 0.3; pointer-events: none; }
+
+    .lightbox-close { top: calc(20px + var(--safe-top)); right: 20px; }
+    .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-prev:active, .lightbox-next:active { transform: translateY(-50%) scale(0.92); }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: calc(20px + var(--safe-bottom));
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 640px) {
+      .lightbox-prev, .lightbox-next {
+        width: 40px; height: 40px;
+      }
+      .lightbox-prev { left: 12px; }
+      .lightbox-next { right: 12px; }
+      .lightbox-close { top: calc(12px + var(--safe-top)); right: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -592,6 +673,26 @@
         <circle cx="12" cy="12" r="9"></circle>
       </svg>
     </button>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie foto">
+    <button class="lightbox-btn lightbox-close" id="lbClose" aria-label="Inchide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"></path>
+      </svg>
+    </button>
+    <button class="lightbox-btn lightbox-prev" id="lbPrev" aria-label="Anterior">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"></path>
+      </svg>
+    </button>
+    <img class="lightbox-img" id="lbImg" alt="" />
+    <button class="lightbox-btn lightbox-next" id="lbNext" aria-label="Urmator">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"></path>
+      </svg>
+    </button>
+    <div class="lightbox-counter" id="lbCounter"></div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -661,8 +762,9 @@
         const safe = photos.filter(p => typeof p === 'string' && /^photos\/[A-Za-z0-9_\-]+\.jpg$/.test(p)).slice(0, 3);
         if (!safe.length) return '';
         const cls = safe.length === 1 ? 'single' : safe.length === 2 ? 'double' : '';
+        const list = safe.map(p => escapeHtml(p)).join('|');
         const items = safe.map((p, i) =>
-          `<a href="${escapeHtml(p)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(p)}" alt="" loading="lazy" /></a>`
+          `<button type="button" class="lb-trigger" data-photos="${list}" data-index="${i}" aria-label="Deschide poza ${i + 1}"><img src="${escapeHtml(p)}" alt="" loading="lazy" /></button>`
         ).join('');
         return `<div class="popup-gallery ${cls}">${items}</div>`;
       }
@@ -771,6 +873,66 @@
           if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggleOpen(); }
         });
         $('locateBtn').addEventListener('click', locateMe);
+        bindLightbox();
+      }
+
+      // === Lightbox ===
+      const lb = { photos: [], index: 0 };
+
+      function bindLightbox() {
+        // Event delegation: gallery buttons live inside popups (built lazily)
+        document.addEventListener('click', (e) => {
+          const trig = e.target.closest('.lb-trigger');
+          if (!trig) return;
+          const list = (trig.dataset.photos || '').split('|').filter(Boolean);
+          const idx = parseInt(trig.dataset.index, 10) || 0;
+          if (list.length) openLightbox(list, idx);
+        });
+        $('lbClose').addEventListener('click', closeLightbox);
+        $('lbPrev').addEventListener('click', () => navLightbox(-1));
+        $('lbNext').addEventListener('click', () => navLightbox(1));
+        $('lightbox').addEventListener('click', (e) => {
+          // Click on backdrop (not the image or controls) closes
+          if (e.target.id === 'lightbox') closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (!$('lightbox').classList.contains('open')) return;
+          if (e.key === 'Escape') closeLightbox();
+          else if (e.key === 'ArrowLeft') navLightbox(-1);
+          else if (e.key === 'ArrowRight') navLightbox(1);
+        });
+      }
+
+      function openLightbox(photos, index) {
+        lb.photos = photos;
+        lb.index = Math.max(0, Math.min(index, photos.length - 1));
+        renderLightbox();
+        $('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        $('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function navLightbox(delta) {
+        const next = lb.index + delta;
+        if (next < 0 || next >= lb.photos.length) return;
+        lb.index = next;
+        renderLightbox();
+      }
+
+      function renderLightbox() {
+        $('lbImg').src = lb.photos[lb.index];
+        $('lbCounter').textContent = `${lb.index + 1} / ${lb.photos.length}`;
+        $('lbPrev').disabled = lb.index === 0;
+        $('lbNext').disabled = lb.index === lb.photos.length - 1;
+        // Hide counter and arrows if only one photo
+        const single = lb.photos.length === 1;
+        $('lbPrev').style.display = single ? 'none' : '';
+        $('lbNext').style.display = single ? 'none' : '';
+        $('lbCounter').style.display = single ? 'none' : '';
       }
 
       let userMarker = null;
