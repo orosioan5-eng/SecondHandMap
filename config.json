@@ -3,6 +3,8 @@
   "center": { "lat": 44.4268, "lng": 26.1025, "zoom": 12 },
   "radius": 15000,
   "max_distance_km": 25,
+  "photos_per_location": 3,
+  "photo_max_width": 800,
   "language": "ro",
   "queries": [
     "second hand",

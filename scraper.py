@@ -32,9 +32,11 @@ def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
 ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = ROOT / "config.json"
 OUTPUT_PATH = ROOT / "locations.json"
+PHOTOS_DIR = ROOT / "photos"
 
 TEXT_SEARCH_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 DETAILS_URL = "https://maps.googleapis.com/maps/api/place/details/json"
+PHOTO_URL = "https://maps.googleapis.com/maps/api/place/photo"
 
 DETAILS_FIELDS = ",".join([
     "place_id",
@@ -51,6 +53,7 @@ DETAILS_FIELDS = ",".join([
     "opening_hours/open_now",
     "business_status",
     "types",
+    "photos",
 ])
 
 # Google place types that are clearly NOT second-hand stores.
@@ -148,6 +151,8 @@ def normalize(detail: dict) -> dict | None:
     if lat is None or lng is None:
         return None
     opening = detail.get("opening_hours") or {}
+    raw_photos = detail.get("photos") or []
+    photo_refs = [p.get("photo_reference") for p in raw_photos if p.get("photo_reference")]
     return {
         "place_id": detail.get("place_id"),
         "name": detail.get("name"),
@@ -163,7 +168,34 @@ def normalize(detail: dict) -> dict | None:
         "open_now": opening.get("open_now"),
         "business_status": detail.get("business_status"),
         "types": detail.get("types") or [],
+        "photo_refs": photo_refs,
+        "photos": [],
     }
+
+
+def safe_filename(s: str) -> str:
+    return "".join(c if c.isalnum() or c in "_-" else "_" for c in s)
+
+
+def download_photo(photo_ref: str, place_id: str, idx: int, max_width: int, api_key: str) -> str | None:
+    """Download a single photo, skip if already on disk. Returns repo-relative path or None."""
+    PHOTOS_DIR.mkdir(exist_ok=True)
+    filename = f"{safe_filename(place_id)}_{idx}.jpg"
+    out_path = PHOTOS_DIR / filename
+    rel_path = f"photos/{filename}"
+    if out_path.exists() and out_path.stat().st_size > 0:
+        return rel_path
+    params = {"maxwidth": max_width, "photoreference": photo_ref, "key": api_key}
+    try:
+        resp = requests.get(PHOTO_URL, params=params, timeout=30, allow_redirects=True)
+        if resp.status_code != 200 or not resp.content:
+            print(f"Photo HTTP {resp.status_code} place={place_id} idx={idx}", file=sys.stderr)
+            return None
+        out_path.write_bytes(resp.content)
+        return rel_path
+    except Exception as exc:
+        print(f"Photo download failed place={place_id} idx={idx}: {exc}", file=sys.stderr)
+        return None
 
 
 def main() -> int:
@@ -174,6 +206,8 @@ def main() -> int:
     center = config.get("center")
     radius = config.get("radius", 15000)
     max_distance_km = config.get("max_distance_km", 25)
+    photos_per_location = config.get("photos_per_location", 3)
+    photo_max_width = config.get("photo_max_width", 800)
     tiles = config.get("tiles") or ([{"lat": center["lat"], "lng": center["lng"], "radius": radius}] if center else [{}])
 
     api_key = get_api_key()
@@ -208,6 +242,21 @@ def main() -> int:
                 seen[pid] = entry
 
     locations = sorted(seen.values(), key=lambda x: (-(x.get("rating") or 0), x.get("name") or ""))
+
+    # Download photos for each location
+    if photos_per_location > 0:
+        print(f"Downloading up to {photos_per_location} photos per location...")
+        for i, entry in enumerate(locations, 1):
+            refs = entry.pop("photo_refs", [])[:photos_per_location]
+            paths = []
+            for j, ref in enumerate(refs):
+                path = download_photo(ref, entry["place_id"], j, photo_max_width, api_key)
+                if path:
+                    paths.append(path)
+            entry["photos"] = paths
+            if i % 20 == 0:
+                print(f"  {i}/{len(locations)} processed")
+        print(f"Done downloading photos")
 
     payload = {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

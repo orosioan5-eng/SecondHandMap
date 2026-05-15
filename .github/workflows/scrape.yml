@@ -1,8 +1,6 @@
 name: Scrape locations
 
 on:
-  schedule:
-    - cron: '0 7 * * 1'   # Mondays 07:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -24,10 +22,10 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
-      - name: Commit updated locations.json
+      - name: Commit updated locations and photos
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add locations.json
+          git add locations.json photos/
           git diff --staged --quiet || git commit -m "chore: update locations $(date -u +%Y-%m-%d)"
           git push

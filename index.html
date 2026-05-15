@@ -7,9 +7,11 @@
   <title>Second Hand Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f8fafc;
@@ -127,7 +129,8 @@
     }
 
     .icon-btn {
-      width: 42px; height: 42px;
+      width: 44px; height: 44px;
+      flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
       background: var(--surface);
       backdrop-filter: blur(12px);
@@ -137,10 +140,11 @@
       box-shadow: var(--shadow-md);
       cursor: pointer;
       color: var(--text);
-      transition: background .15s, transform .1s;
+      transition: background .15s, transform .1s, color .15s, border-color .15s;
+      padding: 0;
     }
     .icon-btn:hover { background: var(--surface-solid); }
-    .icon-btn:active { transform: scale(0.95); }
+    .icon-btn:active { transform: scale(0.94); }
     .icon-btn.active {
       background: var(--primary);
       color: white;
@@ -273,15 +277,53 @@
     .leaflet-popup-tip { box-shadow: var(--shadow-md); }
 
     .popup {
-      padding: 14px 16px;
+      padding: 0;
       font-family: inherit;
     }
+    .popup-body { padding: 14px 16px; }
     .popup h3 {
       margin: 0 0 6px;
       font-size: 15px;
       font-weight: 600;
       letter-spacing: -0.01em;
       color: var(--text);
+    }
+    .popup-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2px;
+      width: 100%;
+      height: 140px;
+      background: var(--bg);
+      overflow: hidden;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+    .popup-gallery.single { grid-template-columns: 1fr; }
+    .popup-gallery.double { grid-template-columns: 1fr 1fr; }
+    .popup-gallery a {
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+    .popup-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .2s;
+    }
+    .popup-gallery a:hover img { transform: scale(1.05); }
+    .popup-gallery .more {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.55);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      pointer-events: none;
     }
     .popup .rating {
       display: inline-flex;
@@ -365,25 +407,80 @@
 
     /* Custom marker pins */
     .pin {
-      width: 30px; height: 30px;
+      width: 32px; height: 32px;
       border-radius: 50% 50% 50% 0;
       transform: rotate(-45deg);
-      border: 2px solid white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      border: 2.5px solid white;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.28);
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform .15s ease;
     }
+    .pin:hover { transform: rotate(-45deg) scale(1.08); }
     .pin-inner {
       transform: rotate(45deg);
       color: white;
       font-size: 11px;
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
-    .pin.high { background: #10b981; }
-    .pin.mid  { background: #f59e0b; }
-    .pin.low  { background: #ef4444; }
-    .pin.none { background: #94a3b8; }
+    .pin.high { background: linear-gradient(135deg, #10b981, #059669); }
+    .pin.mid  { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .pin.low  { background: linear-gradient(135deg, #ef4444, #dc2626); }
+    .pin.none { background: linear-gradient(135deg, #94a3b8, #64748b); }
+
+    /* Cluster styling */
+    .marker-cluster {
+      background: rgba(15, 23, 42, 0.1);
+      border-radius: 50%;
+    }
+    .marker-cluster div {
+      background: var(--primary);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+      width: 36px;
+      height: 36px;
+      margin-left: 2px;
+      margin-top: 2px;
+      line-height: 30px;
+    }
+    .marker-cluster-small div,
+    .marker-cluster-medium div,
+    .marker-cluster-large div { background: var(--primary); }
+    .marker-cluster-medium div { width: 40px; height: 40px; line-height: 34px; }
+    .marker-cluster-large div { width: 46px; height: 46px; line-height: 40px; font-size: 14px; }
+
+    /* Floating action buttons (bottom-right stack) */
+    .fab-stack {
+      position: fixed;
+      right: 12px;
+      bottom: calc(80px + var(--safe-bottom));
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .fab {
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--surface-solid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      color: var(--text);
+      transition: transform .12s ease, background .15s;
+      padding: 0;
+    }
+    .fab:hover { background: var(--bg); }
+    .fab:active { transform: scale(0.92); }
+    .fab.loading { pointer-events: none; }
+    .fab.loading svg { animation: spin 0.8s linear infinite; }
 
     /* Mobile adjustments */
     @media (max-width: 640px) {
@@ -487,9 +584,20 @@
 
   <div class="empty" id="empty">Nicio locatie pentru filtrele curente</div>
 
+  <div class="fab-stack">
+    <button class="fab" id="locateBtn" aria-label="Locatia mea" title="Locatia mea">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M12 1v3M12 20v3M1 12h3M20 12h3"></path>
+        <circle cx="12" cy="12" r="9"></circle>
+      </svg>
+    </button>
+  </div>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script>
     (function () {
       const $ = (id) => document.getElementById(id);
@@ -548,6 +656,17 @@
         return `<span class="stars">${s}</span> <span>${rating.toFixed(1)}</span>`;
       }
 
+      function galleryHtml(photos) {
+        if (!Array.isArray(photos) || !photos.length) return '';
+        const safe = photos.filter(p => typeof p === 'string' && /^photos\/[A-Za-z0-9_\-]+\.jpg$/.test(p)).slice(0, 3);
+        if (!safe.length) return '';
+        const cls = safe.length === 1 ? 'single' : safe.length === 2 ? 'double' : '';
+        const items = safe.map((p, i) =>
+          `<a href="${escapeHtml(p)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(p)}" alt="" loading="lazy" /></a>`
+        ).join('');
+        return `<div class="popup-gallery ${cls}">${items}</div>`;
+      }
+
       function popupHtml(loc) {
         const openBadge = loc.open_now === true
           ? '<span class="badge open">● Deschis acum</span>'
@@ -571,15 +690,18 @@
           : '';
         return `
           <div class="popup">
-            <h3>${escapeHtml(loc.name)}</h3>
-            ${ratingLine}
-            ${loc.address ? `<p class="addr">${escapeHtml(loc.address)}</p>` : ''}
-            ${openBadge ? `<div class="meta">${openBadge}</div>` : ''}
-            ${hours}
-            <div class="actions">
-              <a class="btn" href="${directions}" target="_blank" rel="noopener noreferrer">Directii</a>
-              ${callBtn}
-              ${siteBtn}
+            ${galleryHtml(loc.photos)}
+            <div class="popup-body">
+              <h3>${escapeHtml(loc.name)}</h3>
+              ${ratingLine}
+              ${loc.address ? `<p class="addr">${escapeHtml(loc.address)}</p>` : ''}
+              ${openBadge ? `<div class="meta">${openBadge}</div>` : ''}
+              ${hours}
+              <div class="actions">
+                <a class="btn" href="${directions}" target="_blank" rel="noopener noreferrer">Directii</a>
+                ${callBtn}
+                ${siteBtn}
+              </div>
             </div>
           </div>
         `;
@@ -588,7 +710,7 @@
       function applyFilters() {
         markersLayer.clearLayers();
         const q = filters.query.trim().toLowerCase();
-        let shown = 0;
+        const batch = [];
         for (const loc of allLocations) {
           if (filters.rating > 0 && (loc.rating || 0) < filters.rating) continue;
           if (filters.openOnly && loc.open_now !== true) continue;
@@ -597,12 +719,19 @@
             if (!hay.includes(q)) continue;
           }
           const m = L.marker([loc.lat, loc.lng], { icon: buildIcon(loc) });
-          m.bindPopup(popupHtml(loc), { closeButton: true, maxWidth: 320 });
-          markersLayer.addLayer(m);
-          shown++;
+          // Lazy popup: only build HTML on first open
+          m.bindPopup(() => popupHtml(loc), { closeButton: true, maxWidth: 320 });
+          batch.push(m);
         }
-        $('count').textContent = shown;
-        $('empty').classList.toggle('show', shown === 0 && allLocations.length > 0);
+        markersLayer.addLayers(batch);
+        $('count').textContent = batch.length;
+        $('empty').classList.toggle('show', batch.length === 0 && allLocations.length > 0);
+      }
+
+      let filterTimer = null;
+      function applyFiltersDebounced() {
+        clearTimeout(filterTimer);
+        filterTimer = setTimeout(applyFilters, 80);
       }
 
       function fmtUpdated(iso) {
@@ -621,7 +750,7 @@
         });
         $('search').addEventListener('input', (e) => {
           filters.query = e.target.value;
-          applyFilters();
+          applyFiltersDebounced();
         });
         $('ratingChips').addEventListener('click', (e) => {
           const btn = e.target.closest('.chip');
@@ -641,6 +770,37 @@
         $('openToggle').addEventListener('keydown', (e) => {
           if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggleOpen(); }
         });
+        $('locateBtn').addEventListener('click', locateMe);
+      }
+
+      let userMarker = null;
+      function locateMe() {
+        if (!navigator.geolocation) {
+          alert('Geolocatia nu este disponibila in acest browser');
+          return;
+        }
+        const btn = $('locateBtn');
+        btn.classList.add('loading');
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            btn.classList.remove('loading');
+            const { latitude: lat, longitude: lng } = pos.coords;
+            if (userMarker) userMarker.remove();
+            userMarker = L.circleMarker([lat, lng], {
+              radius: 8,
+              color: '#fff',
+              weight: 3,
+              fillColor: '#3b82f6',
+              fillOpacity: 1,
+            }).addTo(map);
+            map.flyTo([lat, lng], 15, { duration: 0.8 });
+          },
+          (err) => {
+            btn.classList.remove('loading');
+            alert('Nu am putut accesa locatia: ' + (err.message || 'permis refuzat'));
+          },
+          { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
+        );
       }
 
       async function load() {
@@ -655,15 +815,22 @@
           }
         } catch {}
 
-        map = L.map('map', { zoomControl: false }).setView(
-          [configCenter.lat, configCenter.lng], configCenter.zoom
-        );
+        map = L.map('map', {
+          zoomControl: false,
+          preferCanvas: true,
+        }).setView([configCenter.lat, configCenter.lng], configCenter.zoom);
         L.control.zoom({ position: 'bottomright' }).addTo(map);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
-        markersLayer = L.layerGroup().addTo(map);
+        markersLayer = L.markerClusterGroup({
+          showCoverageOnHover: false,
+          spiderfyOnMaxZoom: true,
+          disableClusteringAtZoom: 16,
+          maxClusterRadius: 50,
+          chunkedLoading: true,
+        }).addTo(map);
 
         if (cityName) $('brandCity').textContent = '· ' + cityName;
 
