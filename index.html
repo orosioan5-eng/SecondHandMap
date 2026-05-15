@@ -822,7 +822,12 @@
           }
           const m = L.marker([loc.lat, loc.lng], { icon: buildIcon(loc) });
           // Lazy popup: only build HTML on first open
-          m.bindPopup(() => popupHtml(loc), { closeButton: true, maxWidth: 320 });
+          m.bindPopup(() => popupHtml(loc), { closeButton: true, maxWidth: 320, autoPan: false });
+          // Center map on the marker when clicked
+          m.on('click', () => {
+            const targetZoom = Math.max(map.getZoom(), 15);
+            map.flyTo([loc.lat, loc.lng], targetZoom, { duration: 0.4, easeLinearity: 0.4 });
+          });
           batch.push(m);
         }
         markersLayer.addLayers(batch);
